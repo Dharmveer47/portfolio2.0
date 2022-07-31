@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-
+import { fadeIn } from "./footer.styled";
 export const LandingContainer = styled.div`
   height: 100vh;
   overflow-y: auto;
@@ -21,23 +21,6 @@ export const Test = styled.div`
   width: 100%;
   background: radial-gradient(50% 50% at 50% 50%, #2c3c40 0%, #182226 100%);
 `;
-// const SlowMotion = keyframes`
-//  0% {
-//   transform: translateY(0) translateX(0);
-//  }
-//  25% {
-//   transform: translateY(5px) translateX(5px);
-//  }
-//   50% {
-//   transform: translateY(0) translateX(0);
-//   }
-//   75% {
-//   transform: translateY(-5px) translateX(-5px);
-//   }
-//  100%{
-//   transform: translateY(0) translateX(0);
-//  }
-// `;
 export const Background = styled.img<{ scale: number; size: number }>`
   position: absolute;
   height: 100vh;
@@ -45,7 +28,6 @@ export const Background = styled.img<{ scale: number; size: number }>`
   object-fit: cover;
   z-index: -1;
   transition: 2s ease-in-out;
-
   transform: translateZ(${(props) => `${props.size}px`})
     scale(${(props) => props.scale});
 `;
@@ -61,7 +43,7 @@ export const BackgroundTree = styled.img<{ scale: number; size: number }>`
     scale(${(props) => props.scale});
 `;
 
-const breatheAnimation = keyframes`
+const DLogo = keyframes`
  0% {
   stroke-dashoffset: 789.9083251953125px;
  }
@@ -69,6 +51,7 @@ const breatheAnimation = keyframes`
   stroke-dashoffset: 0px;
  }
 `;
+
 const DharmLogoFill = keyframes`
  0% {
   fill: transparent;
@@ -80,7 +63,8 @@ const DharmLogoFill = keyframes`
 export const PathSvg = styled.path`
   stroke-dasharray: 789.9083251953125px;
   stroke-dashoffset: 789.9083251953125px;
-  animation: ${breatheAnimation} ease-in-out 4s forwards 1s;
+  /* stroke-dashoffset: 500px; */
+  animation: ${DLogo} ease-in-out 4s forwards 1s;
 `;
 const circleAnimation = keyframes`
  0% {
@@ -184,7 +168,7 @@ export const HeroName = styled.div`
   position: relative;
   font-size: 40px;
   letter-spacing: 0.04em;
-  >:nth-child(1) {
+  > :nth-child(1) {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -242,13 +226,17 @@ export const HeroName = styled.div`
   }
 `;
 
-export const Des = styled.div`
+export const Des = styled.div<{ time: number }>`
   font-size: 15px;
   margin: 8px 0;
-`
+  transform-origin: left;
+  transform: scale(0);
+  animation: ${fadeIn} 0.5s ease-in-out ${(props) => `${props.time}s`} forwards;
+`;
 export const SmallDes = styled.div`
   font-size: 12px;
   margin: 10px 0;
+
   &::before {
     content: "";
     position: absolute;

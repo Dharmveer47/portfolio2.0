@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-const fadeIn = keyframes`
+export const fadeIn = keyframes`
     0% {
         transform: scale(0);
     }
@@ -18,5 +18,5 @@ export const FooterStyled = styled.footer`
   letter-spacing: 1px;
   transform-origin: left;
   transform: scale(0);
-  animation: ${fadeIn} 0.5s ease-in-out 5s forwards;
+  animation: ${fadeIn} 0.5s ease-in-out 6s forwards;
 `;

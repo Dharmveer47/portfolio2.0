@@ -24,8 +24,8 @@ const HeroInro = () => {
           <span>H</span>
         </div>
       </div>
-      <Des>FRONT-END WEB DEVELOPER & UI/UX DESIGNER</Des>
-      <Des>PRIMARY FOCUS ON REACT.JS AND CSS</Des>
+      <Des time={5}>FRONT-END WEB DEVELOPER & UI/UX DESIGNER</Des>
+      <Des time={5.5}>PRIMARY FOCUS ON REACT.JS AND CSS</Des>
         <SmallDes>I LOVE MY WORK</SmallDes>
     </>
   );

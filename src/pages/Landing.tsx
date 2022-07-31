@@ -1,4 +1,3 @@
-// import { useState, useEffect } from "react";
 import Tree from "../Img/Trees.png";
 import Mountent from "../Img/Mountent.png";
 import Cloudes from "../Img/Cloud.png";
@@ -23,22 +22,21 @@ import { Footer } from "../components/Footer";
 //     size?: number;
 // }
 export default function Landing() {
-  const handleScroll = (e: any) => {
-    // console.log(e.target.scrollTop);
-  };
-  const handleLoad = (e: any) => {
-    // console.log(e);
-  };
- 
+  
+
+  
+
   return (
-    <LandingContainer onScroll={handleScroll} >
-      <Header onLoad={handleLoad}>
-        <DesignContainer >
+    <LandingContainer >
+      <Header>
+        <DesignContainer>
           <DharmveerLogo />
           <Circle />
         </DesignContainer>
         <Background src={Mountent} scale={4.15} size={-34} />
-        <BackgroundTree src={Tree} scale={2} size={-11} />
+        {/* <Background src={Mountent} scale={3} size={-30} /> */}
+        <BackgroundTree src={Tree} scale={2.02} size={-11} />
+        {/* <BackgroundTree src={Tree} scale={1} size={-2} /> */}
         <Cloude src={Cloudes} scale={6.2} size={-48} />
         <HeroName>
           <HeroInro />
