@@ -16,6 +16,7 @@ import {
 } from "../styles/landing.styled";
 import HeroInro from "../components/HeroInro";
 import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
 
 // interface Props {
 //     scale?: number;
@@ -23,12 +24,16 @@ import { Navbar } from "../components/Navbar";
 // }
 export default function Landing() {
   const handleScroll = (e: any) => {
-    console.log(e.target.scrollTop);
+    // console.log(e.target.scrollTop);
   };
+  const handleLoad = (e: any) => {
+    // console.log(e);
+  };
+ 
   return (
-    <LandingContainer onScroll={handleScroll}>
-      <Header>
-        <DesignContainer>
+    <LandingContainer onScroll={handleScroll} >
+      <Header onLoad={handleLoad}>
+        <DesignContainer >
           <DharmveerLogo />
           <Circle />
         </DesignContainer>
@@ -38,7 +43,8 @@ export default function Landing() {
         <HeroName>
           <HeroInro />
         </HeroName>
-        <Navbar/>
+        <Navbar />
+        <Footer />
       </Header>
       <Test></Test>
     </LandingContainer>

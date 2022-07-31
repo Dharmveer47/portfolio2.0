@@ -4,7 +4,7 @@ const NavlineAni = keyframes`
   height: 0px;
  }
  50%{
-  height:35px;
+  height:40px;
   width: 0px;
 }
 100%{
@@ -12,7 +12,7 @@ const NavlineAni = keyframes`
   border-right: 1px solid #fff;
   border-bottom: 1px solid #fff;
   border-top: 1px solid #fff;
-  height:35px;
+  height:40px;
  }
 `;
 export const NavLinks = styled.div`
