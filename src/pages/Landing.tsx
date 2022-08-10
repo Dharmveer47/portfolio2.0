@@ -1,8 +1,10 @@
+import React from 'react';
 import Tree from "../Img/Trees.png";
 import Mountent from "../Img/Mountent.png";
 import Cloudes from "../Img/Cloud.png";
 import DharmveerLogo from "../components/svgs/DharmLogo";
 import Circle from "../components/svgs/Circle";
+import CircleAniSVG from '../components/svgs/CircleAniSvg';
 import {
   LandingContainer,
   Header,
@@ -23,11 +25,14 @@ import { Footer } from "../components/Footer";
 // }
 export default function Landing() {
   
-
-  
+  const handleScroll = (e: any) => {
+    e.preventDefault();
+    ;
+   
+  };
 
   return (
-    <LandingContainer >
+    <LandingContainer onScroll={handleScroll}>
       <Header>
         <DesignContainer>
           <DharmveerLogo />
@@ -42,6 +47,7 @@ export default function Landing() {
           <HeroInro />
         </HeroName>
         <Navbar />
+        <CircleAniSVG/>
         <Footer />
       </Header>
       <Test></Test>

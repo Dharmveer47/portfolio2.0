@@ -31,17 +31,17 @@ export const Background = styled.img<{ scale: number; size: number }>`
   transform: translateZ(${(props) => `${props.size}px`})
     scale(${(props) => props.scale});
 `;
-export const BackgroundTree = styled.img<{ scale: number; size: number }>`
+export const BackgroundTree = styled.img<{ scale: number; size: number }>(
+  ({ scale, size }) => `
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0px;
-  /* border: 1px solid red; */
   object-fit: cover;
   z-index: -1;
-  transform: translateZ(${(props) => `${props.size}px`})
-    scale(${(props) => props.scale});
-`;
+  transform: translateZ(${size}px) scale(${scale});
+`
+);
 
 const DLogo = keyframes`
  0% {
@@ -125,6 +125,13 @@ export const DesignContainer = styled.div`
     border-top: none;
     border-bottom: 1px solid #fff;
     animation: ${LineAnimation} ease-in-out 1s forwards 3s;
+  }
+  @media screen and (max-width: 768px) {
+    &::after,
+    &::before {
+      display: none;
+    }
+    margin-left: 1rem;
   }
   .LogoCircle {
     /* border: 1px solid red; */
@@ -224,17 +231,25 @@ export const HeroName = styled.div`
       }
     }
   }
+  @media screen and (max-width: 768px) {
+    margin-left: 3rem;
+    margin-top: 1rem;
+    > :nth-child(1) {
+      padding-bottom: 1rem;
+    }
+  }
 `;
 
 export const Des = styled.div<{ time: number }>`
-  font-size: 15px;
+  /* font-size: 15px; */
+  font-size: clamp(10px, 1.5vw, 15px);
   margin: 8px 0;
   transform-origin: left;
   transform: scale(0);
   animation: ${fadeIn} 0.5s ease-in-out ${(props) => `${props.time}s`} forwards;
 `;
 export const SmallDes = styled.div`
-  font-size: 12px;
+  font-size: clamp(8px, 1.5vw, 12px);
   margin: 10px 0;
 
   &::before {
@@ -247,6 +262,9 @@ export const SmallDes = styled.div`
     border-top: 1px solid #fff;
     border-left: 1px solid #fff;
     animation: ${LineAnimation} ease-in-out 1s forwards 3s;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
   &::after {
     content: "";
@@ -257,6 +275,9 @@ export const SmallDes = styled.div`
     /* height: 100px; */
     animation: ${LineAnimation} ease-in-out 1s forwards 3s;
     border-top: 1px solid #fff;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 `;
 // const Heading = styled.h1<{ active: boolean }>`

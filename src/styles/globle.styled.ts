@@ -23,6 +23,10 @@ time, mark, audio, video {
 	scroll-behavior: smooth;
 	font-family: 'Roboto', sans-serif;
 }
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 

@@ -4,7 +4,7 @@ import { SVGProps } from "react"
 const SvgComponent = (props:  SVGProps<SVGSVGElement>) => {
     const Ref = useRef<SVGPathElement>(null);
     useLayoutEffect(() => {
-      console.log(Ref.current?.getTotalLength())
+    //   console.log(Ref.current?.getTotalLength())
     }, [])
     return (
         <svg

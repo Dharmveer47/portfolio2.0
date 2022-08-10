@@ -1,9 +1,14 @@
-import React from "react";
+import React, {  } from "react";
 import { Des,SmallDes } from "../styles/landing.styled"
 const HeroInro = () => {
+  // const [ scroll, setScroll ] = useState(0);
+
+ 
   return (
     <>
-      <div>
+      <div
+        
+      >
         <div>
           <span>D</span>
           <span>H</span>
