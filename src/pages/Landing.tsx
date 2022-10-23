@@ -27,7 +27,7 @@ export default function Landing() {
   
   const handleScroll = (e: any) => {
     e.preventDefault();
-    ;
+    
    
   };
 
@@ -50,7 +50,8 @@ export default function Landing() {
         <CircleAniSVG/>
         <Footer />
       </Header>
-      <Test></Test>
+      <Test>
+      </Test>
     </LandingContainer>
   );
 }

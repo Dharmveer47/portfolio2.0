@@ -19,6 +19,7 @@ export const Header = styled.div`
 export const Test = styled.div`
   height: 100vh;
   width: 100%;
+  transform: translateY(-20px);
   background: radial-gradient(50% 50% at 50% 50%, #2c3c40 0%, #182226 100%);
 `;
 export const Background = styled.img<{ scale: number; size: number }>`
