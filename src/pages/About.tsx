@@ -2,7 +2,7 @@ import React from "react";
 import { AboutContainer, HeadingMain } from "../styles/About.styled";
 import { Des } from "../styles/landing.styled";
 import { BgImg } from "../styles/About.styled";
-import texture from "../Img/texture.png";
+import texture from "../Img/texture.webp";
 const About = () => {
   return (
     <AboutContainer>
