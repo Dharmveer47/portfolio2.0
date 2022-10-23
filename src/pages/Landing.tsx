@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import Tree from "../Img/Trees.png";
 import Mountent from "../Img/Mountent.png";
 import Cloudes from "../Img/Cloud.png";
 import DharmveerLogo from "../components/svgs/DharmLogo";
 import Circle from "../components/svgs/Circle";
-import CircleAniSVG from '../components/svgs/CircleAniSvg';
+import CircleAniSVG from "../components/svgs/CircleAniSvg";
 import {
   LandingContainer,
   Header,
-  Test,
+  Test as AboutContainer,
   Background,
   BackgroundTree,
   DesignContainer,
@@ -18,17 +18,16 @@ import {
 import HeroInro from "../components/HeroInro";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import ParticlesComponents from "../components/particles/Particles";
+import About from "./About";
 
 // interface Props {
 //     scale?: number;
 //     size?: number;
 // }
 export default function Landing() {
-  
   const handleScroll = (e: any) => {
     e.preventDefault();
-    
-   
   };
 
   return (
@@ -47,11 +46,13 @@ export default function Landing() {
           <HeroInro />
         </HeroName>
         <Navbar />
-        <CircleAniSVG/>
+        <CircleAniSVG />
         <Footer />
       </Header>
-      <Test>
-      </Test>
+      <AboutContainer>
+        <About />
+        <ParticlesComponents />
+      </AboutContainer>
     </LandingContainer>
   );
 }

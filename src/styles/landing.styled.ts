@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { fadeIn } from "./footer.styled";
+// import textureImg from "../Img/texture.png"
 export const LandingContainer = styled.div`
   height: 100vh;
   overflow-y: auto;
@@ -20,6 +21,10 @@ export const Test = styled.div`
   height: 100vh;
   width: 100%;
   transform: translateY(-20px);
+  
+  background-repeat:no-repeat;
+  background-size: cover;
+  /* background-color: radial-gradient(50% 50% at 50% 50%, #2c3c40 0%, #182226 100%); */
   background: radial-gradient(50% 50% at 50% 50%, #2c3c40 0%, #182226 100%);
 `;
 export const Background = styled.img<{ scale: number; size: number }>`
@@ -242,12 +247,22 @@ export const HeroName = styled.div`
 `;
 
 export const Des = styled.div<{ time: number }>`
-  /* font-size: 15px; */
-  font-size: clamp(10px, 1.5vw, 15px);
-  margin: 8px 0;
+  font-size: 15px;
+  /* font-size: clamp(10px, 1.5vw, 15px); */
+  width: 70%;
+  font-weight: 300;
+  margin: auto;
+  padding: .3rem 0;
   transform-origin: left;
   transform: scale(0);
+  color: white;
+  /* text-transform: uppercase; */
+  line-height: 1.5rem;
+  letter-spacing: 0.04em;
   animation: ${fadeIn} 0.5s ease-in-out ${(props) => `${props.time}s`} forwards;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    }
 `;
 export const SmallDes = styled.div`
   font-size: clamp(8px, 1.5vw, 12px);

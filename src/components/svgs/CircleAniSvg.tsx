@@ -3,8 +3,8 @@ import { Svg, SvgContainer,SvgPath } from "../../styles/circleAni.styled";
 const CircleAniSVG = (props: SVGProps<SVGSVGElement>) => {
   const pathRef = useRef<SVGCircleElement>(null);
   useLayoutEffect(() => {
-    const pathlegth = pathRef.current?.getTotalLength();
-    console.log(pathlegth);
+    // const pathlegth = pathRef.current?.getTotalLength();
+    // console.log(pathlegth);
   }, []);
   return (
     <SvgContainer>
