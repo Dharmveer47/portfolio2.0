@@ -1,16 +1,24 @@
 import React from "react";
-import { AboutContainer, HeadingMain } from "../styles/About.styled";
+import {
+  AboutContainer,
+  HeadingMain,
+  LineBreak,
+  SubHeading,
+} from "../styles/About.styled";
 import { Des } from "../styles/landing.styled";
-import { BgImg } from "../styles/About.styled";
-import texture from "../Img/texture.webp";
+// import { BgImg } from "../styles/About.styled";
+// import texture from "../Img/texture.webp";
+import htmlImg from "../Img/html.jpg";
+import { GiBrain } from "react-icons/gi";
+// import ParticlesComponents from "../components/particles/Particles";
 const About = () => {
   return (
     <AboutContainer>
-      <BgImg src={texture} alt="Texture" />
+      
       <HeadingMain>WHO AM I ?</HeadingMain>
       <Des time={1}>
-        Hi, I’m Dharmveer Singh. I'm a multi-talented human, wide range of design
-        disciplines.
+        Hi, I’m Dharmveer Singh. I'm a multi-talented human, wide range of
+        design disciplines.
       </Des>
       <Des time={0}>
         I don’t like to define myself by the work I’ve done. I define myself by
@@ -32,7 +40,34 @@ const About = () => {
         up new skills and juggle different projects and roles with relative
         ease.
       </Des>
+      <LineBreak />
+      <SubHeading>MY WEAPONS</SubHeading>
+      <SkillsCard />
     </AboutContainer>
+  );
+};
+
+const SkillsCard = () => {
+  const links = "https://cdn-icons-png.flaticon.com/512/121/121537.png";
+  return (
+    <div className="flex flex-col md:flex-row w-4/5 mx-auto items-center">
+      <div className="w-1/2">
+        <img src={htmlImg} alt="Card" className="w-[80%] aboutCard  p-3 mx-auto skew-y-6 skew-x-12  shadow-white hover:backdrop-contrast-50 " />
+      </div>
+      <div className="w-1/2">
+        <div className="flex items-center text-white">
+          <img src={links} alt="" className="w-6 h-auto md:mx-4 mx-1 my-2" />
+          <p className="text-left md:text-center leading-5 ">HyperText Markup Language</p>
+        </div>
+        <div className="flex items-center ">
+          <GiBrain  className="text-2xl md:mx-4 mx-1 my-2" />
+          <div className="w-80 relative">
+            <span className={`h-2 bg-black rounded-lg shadow block`}></span>
+            <span style={{width: "60%"}} className={`h-2 bg-white absolute top-0 rounded-lg shadow-inner block`}></span>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

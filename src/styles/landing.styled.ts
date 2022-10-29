@@ -18,7 +18,7 @@ export const Header = styled.div`
   margin-top: 1.2rem;
 `;
 export const Test = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   transform: translateY(-20px);
   

@@ -30,6 +30,7 @@ const ParticlesComponents = () => {
           color: {
             value: "#ffffff0",
           },
+          
         },
         backgroundMode: true,
         fpsLimit: 120,
@@ -57,10 +58,10 @@ const ParticlesComponents = () => {
         },
         particles: {
           color: {
-            value: "#ffffff",
+            value: "#ffffff9b",
           },
           links: {
-            color: "#ffffff",
+            color: "#ffffff9e",
             distance: 150,
             enable: true,
             opacity: 0.5,
@@ -96,7 +97,7 @@ const ParticlesComponents = () => {
             type: "circle",
           },
           size: {
-            value: { min: 2, max: 5 },
+            value: { min: 2, max: 7 },
           },
         },
         fullScreen: true,
