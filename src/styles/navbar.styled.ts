@@ -54,6 +54,7 @@ export const NavLinks = styled.div`
     }
     &:hover {
       color: #000;
+      box-shadow: 2px 3px 10px gainsboro;
       &::before {
         width: 100%;
       }

@@ -25,3 +25,8 @@ code {
   background-color: #fff;
   color: black;
 }
+.recharts-polar-angle-axis-tick text tspan{
+  fill: #fff;
+  font-size: 13px;
+
+}
