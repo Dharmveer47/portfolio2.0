@@ -77,5 +77,9 @@ export const dataHtml = [
     A: 30,
     fullMark: 100,
   },
- 
+  {
+    subject: "Figma",
+    A: 60,
+    fullMark: 100,
+  },
 ];

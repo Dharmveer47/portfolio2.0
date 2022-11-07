@@ -51,17 +51,17 @@ const About = () => {
       <LineBreak />
       <SubHeading>MY WEAPONS</SubHeading>
       <div className="flex flex-wrap md:overflow-y-auto items-center justify-center ">
-      <div className="">
+        <div className="">
           <Rchart data={dataHtml} />
           <Wheading des="HTML" />
         </div>
         <div className="">
-          <Rchart data={dataReact} />
-          <Wheading des="JavaScript" />
-        </div>
-        <div className="">
           <Rchart data={dataCss} />
           <Wheading des="CSS" />
+        </div>
+        <div className="">
+          <Rchart data={dataReact} />
+          <Wheading des="JavaScript" />
         </div>
       </div>
     </AboutContainer>
@@ -74,15 +74,15 @@ interface Description {
 const Wheading = ({ des }: Description) => {
   return (
     <div>
-      <h1 className="text-xl  text-white ">{des}</h1>
+      <h1 className="text-xl  text-white">{des}</h1>
     </div>
   );
 };
 interface ChartInt {
-  data: any
+  data: any;
 }
 
-const Rchart = ({data}: ChartInt) => {
+const Rchart = ({ data }: ChartInt) => {
   return (
     <RadarChart
       // cx={300}
@@ -101,7 +101,7 @@ const Rchart = ({data}: ChartInt) => {
         // color="#fff"
         stroke="#82ca9d"
         fill="#82ca9d"
-        fillOpacity={0.5}
+        fillOpacity={0.7}
       />
       {/* <Tooltip isAnimationActive={false} /> */}
       {/* <Radar

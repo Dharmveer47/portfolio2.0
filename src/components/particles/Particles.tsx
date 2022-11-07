@@ -77,7 +77,7 @@ const ParticlesComponents = () => {
               default: "bounce",
             },
             random: true,
-            speed: 2,
+            speed: 5,
             straight: false,
           },
           shadow:{
@@ -86,18 +86,18 @@ const ParticlesComponents = () => {
           number: {
             density: {
               enable: true,
-              area: 500,
+              area: 300,
             },
-            value: 80,
+            value: 15,
           },
           opacity: {
-            value: 0.5,
+            value: 0.3,
           },
           shape: {
             type: "circle",
           },
           size: {
-            value: { min: 2, max: 7 },
+            value: { min: 2, max: 5 },
           },
         },
         fullScreen: true,

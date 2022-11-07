@@ -18,7 +18,7 @@ import {
 import HeroInro from "../components/HeroInro";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-// import ParticlesComponents from "../components/particles/Particles";
+import ParticlesComponents from "../components/particles/Particles";
 import About from "./About";
 
 // interface Props {
@@ -51,7 +51,7 @@ export default function Landing() {
       </Header>
       <AboutContainer>
         <About />
-        {/* <ParticlesComponents /> */}
+        <ParticlesComponents />
       </AboutContainer>
     </LandingContainer>
   );

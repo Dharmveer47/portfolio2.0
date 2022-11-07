@@ -26,7 +26,11 @@ export const SvgPath = styled.path<{ time: number }>`
   fill:"#182226";
   transform-origin: center;
   transform: rotate(50deg);
+  transition: all ease .1s;
   animation: ${CircleAnimation} ease-in-out ${(props) => `${props.time}s`} alternate-reverse infinite;
+  &:hover{
+    filter: drop-shadow(2px 2px 6px #aff);
+  }
 `;
 
 
