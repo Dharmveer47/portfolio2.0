@@ -9,6 +9,7 @@ import {
   LandingContainer,
   Header,
   Test as AboutContainer,
+  Test as ProjectContainer,
   Background,
   BackgroundTree,
   DesignContainer,
@@ -20,7 +21,8 @@ import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import ParticlesComponents from "../components/particles/Particles";
 import About from "./About";
-
+import Projects from "./Projects";
+// import { HashLink } from 'react-router-hash-link';
 // interface Props {
 //     scale?: number;
 //     size?: number;
@@ -53,6 +55,9 @@ export default function Landing() {
         <About />
         <ParticlesComponents />
       </AboutContainer>
+      <ProjectContainer>
+        <Projects />
+      </ProjectContainer>
     </LandingContainer>
   );
 }

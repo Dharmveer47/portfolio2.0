@@ -22,7 +22,7 @@ import { Des } from "../styles/landing.styled";
 // import ParticlesComponents from "../components/particles/Particles";
 const About = () => {
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <HeadingMain>WHO AM I ?</HeadingMain>
       <Des time={1}>
         Hi, I’m Dharmveer Singh. I'm a multi-talented human, wide range of
