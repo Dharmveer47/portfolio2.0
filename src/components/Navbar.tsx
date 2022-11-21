@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { HashLink, NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 // import { }
 import { NavLinks } from "../styles/navbar.styled";
 export const Navbar: React.FC = () => {
