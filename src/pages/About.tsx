@@ -55,13 +55,14 @@ const About = () => {
           <Rchart data={dataHtml} />
           <Wheading des="HTML" />
         </div>
-        <div className="">
-          <Rchart data={dataCss} />
-          <Wheading des="CSS" />
-        </div>
+       
         <div className="">
           <Rchart data={dataReact} />
           <Wheading des="JavaScript" />
+        </div>
+        <div className="">
+          <Rchart data={dataCss} />
+          <Wheading des="Others" />
         </div>
       </div>
     </AboutContainer>

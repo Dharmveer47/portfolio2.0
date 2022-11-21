@@ -32,11 +32,47 @@ export const dataReact = [
 ];
 export const dataCss = [
   {
+    subject: "HTML5",
+    A: 70,
+    fullMark: 100,
+  },
+  {
+    subject: "Figma",
+    A: 60,
+    fullMark: 100,
+  },
+  {
+    subject: "SVG",
+    A: 50,
+    fullMark: 100,
+  },
+  {
+    subject: "NPM",
+    A: 70,
+    fullMark: 100,
+  },
+  {
+    subject: "StoryBook",
+    A: 60,
+    fullMark: 100,
+  },
+  
+];
+
+
+export const dataHtml = [
+  {
+    subject: "HTML5",
+    A: 70,
+    fullMark: 100,
+  },
+ 
+  
+  {
     subject: "CSS",
     A: 85,
     fullMark: 100,
   },
-
   {
     subject: "Tailwind Css",
     A: 75,
@@ -55,31 +91,6 @@ export const dataCss = [
   {
     subject: "SCSS",
     A: 85,
-    fullMark: 100,
-  },
-];
-
-
-export const dataHtml = [
-  {
-    subject: "HTML5",
-    A: 70,
-    fullMark: 100,
-  },
-
-  {
-    subject: "SVG",
-    A: 50,
-    fullMark: 100,
-  },
-  {
-    subject: "HTML Canvas",
-    A: 30,
-    fullMark: 100,
-  },
-  {
-    subject: "Figma",
-    A: 60,
     fullMark: 100,
   },
 ];
