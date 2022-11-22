@@ -44,16 +44,16 @@ export default function Landing() {
         <BackgroundTree src={Tree} scale={2.02} size={-11} />
         {/* <BackgroundTree src={Tree} scale={1} size={-2} /> */}
         <Cloude src={Cloudes} scale={6.2} size={-48} />
-        {/* <HeroName>
+        <HeroName>
           <HeroInro />
-        </HeroName> */}
-        {/* <Navbar /> */}
-        {/* <CircleAniSVG /> */}
-        {/* <Footer /> */}
+        </HeroName>
+        <Navbar />
+        <CircleAniSVG />
+        <Footer />
       </Header>
       <AboutContainer>
         <About />
-        {/* <ParticlesComponents /> */}
+        <ParticlesComponents />
       </AboutContainer>
       <ProjectContainer>
         <Projects />
