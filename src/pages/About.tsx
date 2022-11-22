@@ -51,16 +51,16 @@ const About = () => {
       <LineBreak />
       <SubHeading>MY WEAPONS</SubHeading>
       <div className="flex flex-wrap md:overflow-y-auto items-center justify-center ">
-        <div className="">
+        <div className="shadow-lg m-1">
           <Rchart data={dataHtml} />
           <Wheading des="HTML" />
         </div>
        
-        <div className="">
+        <div className="shadow-lg m-1">
           <Rchart data={dataReact} />
           <Wheading des="JavaScript" />
         </div>
-        <div className="">
+        <div className="shadow-lg m-1">
           <Rchart data={dataCss} />
           <Wheading des="Others" />
         </div>
@@ -75,7 +75,7 @@ interface Description {
 const Wheading = ({ des }: Description) => {
   return (
     <div>
-      <h1 className="text-xl  text-white">{des}</h1>
+      <h1 className="text-2xl tracking-wide font-bold  text-white my-5">{des}</h1>
     </div>
   );
 };
