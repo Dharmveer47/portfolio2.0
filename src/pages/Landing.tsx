@@ -28,21 +28,19 @@ import Projects from "./Projects";
 //     size?: number;
 // }
 export default function Landing() {
-  const handleScroll = (e: any) => {
-    e.preventDefault();
-  };
+  // const handleScroll = (e: any) => {
+  //   e.preventDefault();
+  // };
 
   return (
-    <LandingContainer onScroll={handleScroll}>
+    <LandingContainer>
       <Header>
         <DesignContainer>
           <DharmveerLogo />
           <Circle />
         </DesignContainer>
         <Background src={Mountent} scale={4.15} size={-34} />
-        {/* <Background src={Mountent} scale={3} size={-30} /> */}
         <BackgroundTree src={Tree} scale={2.02} size={-11} />
-        {/* <BackgroundTree src={Tree} scale={1} size={-2} /> */}
         <Cloude src={Cloudes} scale={6.2} size={-48} />
         <HeroName>
           <HeroInro />

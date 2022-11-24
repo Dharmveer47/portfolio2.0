@@ -32,3 +32,16 @@ code {
   font-size: 13px;
 
 }
+.transitionAni{
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: scrollAni 30s  infinite 1s alternate;
+  /* radial-gradient(50% 50% at 50% 50%, #2c3c40 0%, #182226 100%) */
+}
+@keyframes scrollAni {
+  0%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(-50%);
+  }
+}
