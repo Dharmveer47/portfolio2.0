@@ -21,8 +21,8 @@ export const Test = styled.div`
   min-height: 100vh;
   width: 100%;
   transform: translateY(-20px);
-  
-  background-repeat:no-repeat;
+
+  background-repeat: no-repeat;
   background-size: cover;
   /* background-color: radial-gradient(50% 50% at 50% 50%, #2c3c40 0%, #182226 100%); */
   background: radial-gradient(50% 50% at 50% 50%, #2c3c40 0%, #182226 100%);
@@ -156,8 +156,8 @@ export const DesignContainer = styled.div`
 export const Cloude = styled.img<{ scale: number; size: number }>`
   position: absolute;
   top: -1400px;
-  /* width: 100%; */
-  /* height: 40vh; */
+  width: 100%;
+  height: auto;
   z-index: -1;
   transform: translateZ(${(props) => `${props.size}px`})
     scale(${(props) => props.scale});
@@ -252,7 +252,7 @@ export const Des = styled.div<{ time: number }>`
   width: 70%;
   font-weight: 300;
   margin: auto;
-  padding: .3rem 0;
+  padding: 0.3rem 0;
   transform-origin: left;
   transform: scale(0);
   color: white;
@@ -262,7 +262,7 @@ export const Des = styled.div<{ time: number }>`
   animation: ${fadeIn} 0.5s ease-in-out ${(props) => `${props.time}s`} forwards;
   @media screen and (max-width: 768px) {
     width: 90%;
-    }
+  }
 `;
 export const SmallDes = styled.div`
   font-size: clamp(8px, 1.5vw, 12px);

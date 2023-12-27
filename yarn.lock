@@ -3599,6 +3599,11 @@ csstype@^3.0.2:
   resolved "https://registry.npmjs.org/csstype/-/csstype-3.1.0.tgz"
   integrity sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA==
 
+cursor-effects@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.npmjs.org/cursor-effects/-/cursor-effects-1.0.12.tgz"
+  integrity sha512-HDaKd+GJjveac1g52krmFiJJg0HwnxCeKgktGaPpbv6/7z8/krYgmTpDZW9GZ01S5783R6cPhEHAgHWQEm211w==
+
 d3-array@^2.3.0, d3-array@2:
   version "2.12.1"
   resolved "https://registry.npmjs.org/d3-array/-/d3-array-2.12.1.tgz"
