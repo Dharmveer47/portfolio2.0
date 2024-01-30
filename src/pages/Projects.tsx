@@ -37,9 +37,10 @@ const Projects: React.FC = () => {
             <h2 className="text-2xl my-5 mb-8">Project Name</h2>
             <div className="flex">
               <div className="w-3 bg-white mr-6  rounded-sm"></div>
-              <div className="p-2 leading-6 tracking-wide">
+
+              <div className="p-2 leading-6 tracking-wide transition-all">
+                {(hash === HASH_LINK.RTH || hash === "") && DES.RTH}
                 {hash === HASH_LINK.SPOTBUS_CANVAS && DES.SPOTBUS_CANVAS}
-                {hash === HASH_LINK.RTH && DES.RTH}
                 {hash === HASH_LINK.SPOTBUS_DASHBOARD && DES.SPOTBUS_DASHBOARD}
                 {hash === HASH_LINK.SPOTBUS_CHAT_BOT && DES.SPOTBUS_CHAT_BOT}
               </div>
@@ -76,17 +77,18 @@ const Projects: React.FC = () => {
 
 const LI: React.FC<{ name: string; _to: string }> = ({ name, _to }) => {
   const { hash } = useLocation();
+  const _hashLink = hash === "" ? HASH_LINK.RTH : hash;
   return (
     <li
       className="border-solid w-max leading-6
-      hover:text-gray-200 hover:tracking-wider transition-all group "
+      hover:text-gray-200 hover:tracking-wider transition-all group"
       role="button"
     >
       <Link to={`${_to}`}>{name}</Link>
       <div
         className={`underLine ${
-          hash === _to ? "w-full" : "w-0"
-        }  group-hover:w-full`}
+          _hashLink === _to ? "w-full" : "w-0"
+        } group-hover:w-full`}
       ></div>
     </li>
   );
