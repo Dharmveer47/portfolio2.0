@@ -21,6 +21,7 @@ export const Test = styled.div`
   min-height: 100vh;
   width: 100%;
   transform: translateY(-20px);
+  position: relative;
 
   background-repeat: no-repeat;
   background-size: cover;

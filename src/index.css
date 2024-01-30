@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -9,40 +10,55 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-html{
+
+
+html {
   scroll-behavior: smooth;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 .aboutCard {
   transition: all ease-in-out .5s;
   transform: matrix(0.88, 0, -0.63, 1, 0, 0);
 }
-.aboutCard:hover{
+
+.aboutCard:hover {
   filter: drop-shadow(18px 25px 4px #000000);
 }
-.active{
+
+.active {
   background-color: #fff;
   color: black;
 }
-.recharts-polar-angle-axis-tick text tspan{
+
+.recharts-polar-angle-axis-tick text tspan {
   fill: #fff;
   font-size: 13px;
 
 }
-.transitionAni{
+
+.transitionAni {
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-  animation: scrollAni 30s  infinite 1s alternate;
+  animation: scrollAni 30s infinite 1s alternate;
   /* radial-gradient(50% 50% at 50% 50%, #2c3c40 0%, #182226 100%) */
 }
-@keyframes scrollAni {
-  0%{
-    transform: translateY(0%);
-  }
-  100%{
-    transform: translateY(-50%);
+
+@layer utilities {
+  .underLine {
+    @apply h-1 bg-white rounded-lg transition-all;
   }
 }
 
+@keyframes scrollAni {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}

@@ -7,15 +7,6 @@ import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 
 const App: React.FC = () => {
-  useEffect(() => {
-    let cursorEffect = new cursoreffects.followingDotCursor({
-      color: ["#00000082"],
-    });
-    return () => {
-      cursorEffect.destroy();
-    };
-  }, []);
-
   return (
     <div className="App">
       <BrowserRouter>

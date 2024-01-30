@@ -1,62 +1,94 @@
 import React from "react";
 import { HeadingMain } from "../styles/About.styled";
-import TablateImage from "../Img/tablate.png";
-import { LineBreak } from "../styles/About.styled";
-import Rth from "../Img/rth.png";
-import RthMob from "../Img/rthMob.png";
-import ApplePng from "../Img/applePng.png";
+import { Link, useLocation } from "react-router-dom";
+
+const HASH_LINK = {
+  RTH: "#road-that-honk",
+  SPOTBUS_CANVAS: "#spotbus-canvas",
+  SPOTBUS_DASHBOARD: "#spotbus-dashboard",
+  SPOTBUS_CHAT_BOT: "#spotbus-chat-bot",
+};
+
+const DES = {
+  RTH: "The project is known as 'Roads That Honk', and to prevent accidents on sharp turns on hilly roads, it consists of SmartLife poles at both sides of sharp curves and hairpin bends. Both the poles communicate with each other with the help of wireless technology and monitor the incoming traffic with radar systems. The poles detect the speeds of incoming vehicles and then communicate with each other to alert the drivers of the approaching vehicles on either side with the sound of a horn",
+  SPOTBUS_CANVAS:
+    "SpotBus's routing canvas makes route planning easy and efficient. With our innovative AI technology, you can generate optimized routes with just one click. Say goodbye to the time-consuming and error-prone process of manual route planning. Our AI takes into account various factors such as traffic patterns, road closures, and time constraints to provide you with the most efficient routes possible. This feature saves you time and money, enabling you to focus on what really matters - providing excellent service to your customers.",
+  SPOTBUS_DASHBOARD:
+    "SpotBus is a school bus tracker app that functions as a school vehicle monitoring system. It uses GPS tracking to provide real-time updates on the location of school buses. The app is designed to be user-friendly for both parents and drivers, and it is considered one of the best GPS tracking apps in the US.",
+  SPOTBUS_CHAT_BOT:
+    "SpotBus brings cutting-edge technology to your fingertips with a state-of-the-art AI-powered chatbot, leveraging the power of Generative AI technology. With just a few clicks, the Transportation Director’s team can customize the chatbot widget and integrate it into the school website.",
+};
+
 const Projects: React.FC = () => {
+  const { hash } = useLocation();
   return (
-    <div id="projects" className="">
+    <div id="projects" className=" w-fulls flex flex-col">
       <HeadingMain>Featured Projects</HeadingMain>
-      <SingleProject />
+
+      <div
+        className="border h-[80vh]  flex  
+      items-center justify-center"
+      >
+        <div
+          className="border  text-gray-100   
+        text-start w-3/4 flex   items-center justify-between font-light"
+        >
+          <div className="w-1/2">
+            <h2 className="text-2xl my-5 mb-8">Project Name</h2>
+            <div className="flex">
+              <div className="w-3 bg-white mr-6  rounded-sm"></div>
+              <div className="p-2 leading-6 tracking-wide">
+                {hash === HASH_LINK.SPOTBUS_CANVAS && DES.SPOTBUS_CANVAS}
+                {hash === HASH_LINK.RTH && DES.RTH}
+                {hash === HASH_LINK.SPOTBUS_DASHBOARD && DES.SPOTBUS_DASHBOARD}
+                {hash === HASH_LINK.SPOTBUS_CHAT_BOT && DES.SPOTBUS_CHAT_BOT}
+              </div>
+            </div>
+            <div className="mx-8 mt-5 font-bold  tracking-wide ">
+              {/* <div>View Site</div> */}
+              <div className="w-10 bg-white my-2  rounded-sm h-[2px]"></div>
+            </div>
+          </div>
+
+          <div className="w-1/3  relative">
+            <div className="absolute -top-12 -left-6">
+              <div className="w-20 bg-white my-2  rounded-sm h-[2px]"></div>
+              <div className="w-[3px] bg-white my-2  rounded-sm h-20"></div>
+            </div>
+            <div className="text-2xl mb-8">Projects</div>
+            <div>
+              <ul className="space-y-3  text-sm">
+                <LI name="Road That Honk" _to={HASH_LINK.RTH} />
+                <LI name="Spotbus Canvas" _to={HASH_LINK.SPOTBUS_CANVAS} />
+                <LI
+                  name="Spotbus Dashboard"
+                  _to={HASH_LINK.SPOTBUS_DASHBOARD}
+                />
+                <LI name="Spotbus Chat bot" _to={HASH_LINK.SPOTBUS_CHAT_BOT} />
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
-const SingleProject: React.FC<{}> = () => {
+const LI: React.FC<{ name: string; _to: string }> = ({ name, _to }) => {
+  const { hash } = useLocation();
   return (
-    <>
-      <div className="flex md:flex-row flex-col text-left my-6 md:w-9/12 w-full m-auto ">
-        <div className="px-5 relative overflow-hidden ">
-          <div className="relative block">
-            <img src={TablateImage} alt="" className="relative z-10 " />
-            <div className="overflow-hidden bg-black  absolute top-0 h-3/4 rounded-3xl ">
-              <img
-                src={Rth}
-                alt=""
-                className="relative px-4 pt-4 w-full z-0 transform-gpu transitionAni"
-              />
-            </div>
-          </div>
-          <div className="block absolute bottom-0 right-0 w-1/4 z-30  ">
-            <img src={ApplePng} alt="" className="relative z-30" />
-            <div className="absolute  bg-black    mx-auto top-1 rounded-2xl  overflow-hidden h-[98%] ">
-              <img
-                src={RthMob}
-                alt=""
-                className="shadow-xl relative p-1  z-0 transform-gpu rounded-2xl  transitionAni"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="px-5 md:w-full">
-          <h1 className="text-3xl text-gray-100 tracking-wide font-bold py-4">
-            Roads That Honk
-          </h1>
-          <p className="text-gray-300 py-2 tracking-wide leading-5 pl-2">
-          Roads That Honk - the world's first anti-collision vehicle management system for dangerous hairpin bends.
-          </p>
-          <h1 className="text-xl text-gray-100 tracking-wide font-bold py-1">
-            Role and Responsibility
-          </h1>
-          <p className="text-gray-300 py-2 tracking-wide leading-5 pl-2">
-            Project Descripttur delectus sit iusto aspernatur, porro cum?
-          </p>
-        </div>
-      </div>
-      <LineBreak />
-    </>
+    <li
+      className="border-solid w-max leading-6
+      hover:text-gray-200 hover:tracking-wider transition-all group "
+      role="button"
+    >
+      <Link to={`${_to}`}>{name}</Link>
+      <div
+        className={`underLine ${
+          hash === _to ? "w-full" : "w-0"
+        }  group-hover:w-full`}
+      ></div>
+    </li>
   );
 };
 
