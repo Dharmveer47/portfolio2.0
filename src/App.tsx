@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Landing from "./pages/Landing";
 import { Globlestyle } from "./styles/globle.styled";
 
-import * as cursoreffects from "cursor-effects";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 
