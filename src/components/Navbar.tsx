@@ -29,31 +29,31 @@ export const Navbar: React.FC = () => {
         className={`nav-link ${active === Links.ABOUT ? "active" : ""}`}
         onClick={() => setActive(Links.ABOUT)}
       >
-        <HashLinksCus address="/#about" navName="ABOUT ME" />
+        <HashLinksCus address="/about" navName="ABOUT ME" />
       </div>
       <div
         className={`nav-link ${active === Links.PROJECTS ? "active" : ""}`}
         onClick={() => setActive(Links.PROJECTS)}
       >
-        <HashLinksCus address="/#projects" navName="PROJECTS" />
+        <HashLinksCus address="/projects" navName="PROJECTS" />
       </div>
       <div
         className={`nav-link ${active === Links.CONTACT ? "active" : ""}`}
         onClick={() => setActive(Links.CONTACT)}
       >
-        CONTACT
+        <a href="mailto:singhdharmu89@gmail.com">CONTACT</a>
       </div>
       <div
         className={`nav-link ${active === Links["LINKED IN"] ? "active" : ""}`}
         onClick={() => setActive(Links["LINKED IN"])}
       >
-        LINKED IN
+        <a href="https://www.linkedin.com/in/dharmveer47/">LINKEDIN IN</a>
       </div>
       <div
         className={`nav-link ${active === Links.GITHUB ? "active" : ""}`}
         onClick={() => setActive(Links.GITHUB)}
       >
-        GITHUB
+        <a href="https://github.com/Dharmveer47">GITHUB</a>
       </div>
     </NavLinks>
   );
