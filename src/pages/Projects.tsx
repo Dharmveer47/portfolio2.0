@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { HeadingMain } from "../styles/About.styled";
 import { Link, useLocation } from "react-router-dom";
 
@@ -21,6 +21,7 @@ const DES = {
 
 const Projects: React.FC = () => {
   const { hash } = useLocation();
+  const [name, setName] = useState("");
   return (
     <div id="projects" className=" w-fulls flex flex-col">
       <HeadingMain>Featured Projects</HeadingMain>
@@ -34,7 +35,7 @@ const Projects: React.FC = () => {
         text-start w-3/4 flex   items-center justify-between font-light"
         >
           <div className="w-1/2">
-            <h2 className="text-2xl my-5 mb-8">Project Name</h2>
+            <h2 className="text-2xl my-5 mb-8">{name}</h2>
             <div className="flex">
               <div className="w-3 bg-white mr-6  rounded-sm"></div>
 
@@ -59,13 +60,26 @@ const Projects: React.FC = () => {
             <div className="text-2xl mb-8">Projects</div>
             <div>
               <ul className="space-y-3  text-sm">
-                <LI name="Road That Honk" _to={HASH_LINK.RTH} />
-                <LI name="Spotbus Canvas" _to={HASH_LINK.SPOTBUS_CANVAS} />
                 <LI
+                  setName={setName}
+                  name="Road That Honk"
+                  _to={HASH_LINK.RTH}
+                />
+                <LI
+                  setName={setName}
+                  name="Spotbus Canvas"
+                  _to={HASH_LINK.SPOTBUS_CANVAS}
+                />
+                <LI
+                  setName={setName}
                   name="Spotbus Dashboard"
                   _to={HASH_LINK.SPOTBUS_DASHBOARD}
                 />
-                <LI name="Spotbus Chat bot" _to={HASH_LINK.SPOTBUS_CHAT_BOT} />
+                <LI
+                  setName={setName}
+                  name="Spotbus Chat bot"
+                  _to={HASH_LINK.SPOTBUS_CHAT_BOT}
+                />
               </ul>
             </div>
           </div>
@@ -75,9 +89,18 @@ const Projects: React.FC = () => {
   );
 };
 
-const LI: React.FC<{ name: string; _to: string }> = ({ name, _to }) => {
+const LI: React.FC<{
+  name: string;
+  _to: string;
+  setName: React.Dispatch<React.SetStateAction<string>>;
+}> = ({ name, _to, setName }) => {
   const { hash } = useLocation();
   const _hashLink = hash === "" ? HASH_LINK.RTH : hash;
+
+  useEffect(() => {
+    _hashLink === _to && setName(name);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [name, hash]);
   return (
     <li
       className="border-solid w-max leading-6
