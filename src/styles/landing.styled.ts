@@ -162,6 +162,22 @@ export const Cloude = styled.img<{ scale: number; size: number }>`
   z-index: -1;
   transform: translateZ(${(props) => `${props.size}px`})
     scale(${(props) => props.scale});
+  animation: float 10s ease-in-out infinite;
+
+  @keyframes float {
+    0% {
+      transform: translateZ(${(props) => `${props.size}px`})
+        scale(${(props) => props.scale}) translateY(0);
+    }
+    50% {
+      transform: translateZ(${(props) => `${props.size}px`})
+        scale(${(props) => props.scale}) translateY(15px);
+    }
+    100% {
+      transform: translateZ(${(props) => `${props.size}px`})
+        scale(${(props) => props.scale}) translateY(0);
+    }
+  }
 `;
 
 const TextAnimation = keyframes`

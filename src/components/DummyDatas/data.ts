@@ -11,7 +11,7 @@ export const dataReact = [
   },
   {
     subject: "NEXT Js",
-    A: 20,
+    A: 80,
     fullMark: 100,
   },
   {
