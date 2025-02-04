@@ -22,6 +22,7 @@ import { Footer } from "../components/Footer";
 import ParticlesComponents from "../components/particles/Particles";
 import About from "./About";
 import Projects from "./Projects";
+import OldShowCase from "./OldShowCase";
 
 // import { HashLink } from 'react-router-hash-link';
 // interface Props {
@@ -34,29 +35,32 @@ export default function Landing() {
   // };
 
   return (
-    <LandingContainer>
-      <Header>
-        <DesignContainer>
-          <DharmveerLogo />
-          <Circle />
-        </DesignContainer>
-        <Background src={Mountent} scale={4.15} size={-34} />
-        <BackgroundTree src={Tree} scale={2.02} size={-11} />
-        <Cloude src={Cloudes} scale={6.2} size={-48} />
-        <HeroName>
-          <HeroInro />
-        </HeroName>
-        <Navbar />
-        <CircleAniSVG />
-        <Footer />
-      </Header>
-      <AboutContainer>
-        <About />
-        <ParticlesComponents />
-      </AboutContainer>
-      <ProjectContainer>
-        <Projects />
-      </ProjectContainer>
-    </LandingContainer>
+    <>
+      <LandingContainer>
+        <Header>
+          <DesignContainer>
+            <DharmveerLogo />
+            <Circle />
+          </DesignContainer>
+          <Background src={Mountent} scale={4.15} size={-34} />
+          <BackgroundTree src={Tree} scale={2.02} size={-11} />
+          <Cloude src={Cloudes} scale={6.2} size={-48} />
+          <HeroName>
+            <HeroInro />
+          </HeroName>
+          <Navbar />
+          <CircleAniSVG />
+          <Footer />
+        </Header>
+        <AboutContainer>
+          <About />
+          <ParticlesComponents />
+        </AboutContainer>
+        <ProjectContainer>
+          <Projects />
+        </ProjectContainer>
+        <OldShowCase />
+      </LandingContainer>
+    </>
   );
 }

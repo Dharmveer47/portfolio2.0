@@ -70,7 +70,7 @@ const Projects: React.FC = () => {
             <div className="w-full">
               <ul
                 className={` ${
-                  isMobile ? "flex  w-full" : "space-y-3"
+                  isMobile ? "flex  w-full gap-2" : "space-y-3"
                 }   text-sm `}
               >
                 <LI
