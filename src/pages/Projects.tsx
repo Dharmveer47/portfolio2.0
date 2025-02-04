@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HeadingMain } from "../styles/About.styled";
 import { Link, useLocation } from "react-router-dom";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 const HASH_LINK = {
   RTH: "#road-that-honk",
@@ -22,19 +23,25 @@ const DES = {
 const Projects: React.FC = () => {
   const { hash } = useLocation();
   const [name, setName] = useState("");
+  const isMobile = useIsMobile();
+  console.log(isMobile, "check_isMobile");
   return (
     <div id="projects" className=" w-fulls flex flex-col">
       <HeadingMain>Featured Projects</HeadingMain>
 
       <div
-        className="border h-[80vh]  flex  
+        className="border min-h-[80vh]  flex  
       items-center justify-center"
       >
         <div
-          className="border  text-gray-100   
-        text-start w-3/4 flex   items-center justify-between font-light"
+          className={`border  text-gray-100   
+        text-start ${
+          isMobile ? "w-5/6" : "w-3/4"
+        }  flex   items-center justify-between font-light ${
+            isMobile ? "flex-col-reverse" : "flex-row"
+          }`}
         >
-          <div className="w-1/2">
+          <div className={` ${isMobile ? "w-5/6" : "w-1/2"}`}>
             <h2 className="text-2xl my-5 mb-8">{name}</h2>
             <div className="flex">
               <div className="w-3 bg-white mr-6  rounded-sm"></div>
@@ -52,14 +59,20 @@ const Projects: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-1/3  relative">
-            <div className="absolute -top-12 -left-6">
-              <div className="w-20 bg-white my-2  rounded-sm h-[2px]"></div>
-              <div className="w-[3px] bg-white my-2  rounded-sm h-20"></div>
-            </div>
-            <div className="text-2xl mb-8">Projects</div>
-            <div>
-              <ul className="space-y-3  text-sm">
+          <div className={`${isMobile ? "w-full" : "w-1/3"}   relative `}>
+            {!isMobile && (
+              <div className="absolute -top-12 -left-6">
+                <div className="w-20 bg-white my-2  rounded-sm h-[2px]"></div>
+                <div className="w-[3px] bg-white my-2  rounded-sm h-20"></div>
+              </div>
+            )}
+            {!isMobile && <div className="text-2xl mb-8">Projects</div>}
+            <div className="w-full">
+              <ul
+                className={` ${
+                  isMobile ? "flex  w-full" : "space-y-3"
+                }   text-sm `}
+              >
                 <LI
                   setName={setName}
                   name="Road That Honk"
