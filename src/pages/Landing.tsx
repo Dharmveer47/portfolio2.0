@@ -59,7 +59,7 @@ export default function Landing() {
         <ProjectContainer>
           <Projects />
         </ProjectContainer>
-        <OldShowCase />
+        {/* <OldShowCase /> */}
       </LandingContainer>
     </>
   );

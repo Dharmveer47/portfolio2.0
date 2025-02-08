@@ -30,6 +30,7 @@ export const LineBreak = styled.div`
 
 export const AboutContainer = styled.div`
   position: relative;
+  
 `;
 export const BgImg = styled.img`
   width: 100%;

@@ -1,14 +1,11 @@
-import React, {  } from "react";
-import { Des,SmallDes } from "../styles/landing.styled"
+import React from "react";
+import { Des, SmallDes } from "../styles/landing.styled";
 const HeroInro = () => {
   // const [ scroll, setScroll ] = useState(0);
 
- 
   return (
     <>
-      <div
-        
-      >
+      <div>
         <div>
           <span>D</span>
           <span>H</span>
@@ -30,8 +27,8 @@ const HeroInro = () => {
         </div>
       </div>
       <Des time={5}>FRONT-END WEB DEVELOPER</Des>
-      <Des time={5.5}>PRIMARY FOCUS ON REACT.JS AND CSS</Des>
-        <SmallDes>I LOVE MY WORK</SmallDes>
+      <Des time={5.5}>PRIMARY FOCUS ON FRONT-END TOOLS & TECHNOLOGIES</Des>
+      <SmallDes>I LOVE MY WORK</SmallDes>
     </>
   );
 };

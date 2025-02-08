@@ -24,30 +24,32 @@ const About = () => {
   return (
     <AboutContainer id="about">
       <HeadingMain>WHO AM I ?</HeadingMain>
-      <Des time={1}>
-        Hi, I’m Dharmveer Singh. I'm a multi-talented human, wide range of
-        design disciplines.
-      </Des>
-      <Des time={0}>
-        I don’t like to define myself by the work I’ve done. I define myself by
-        the work I want to do. Skills can be taught, personality is inherent. I
-        prefer to keep learning, continue challenging myself, and do interesting
-        things that matter.
-      </Des>
-      <Des time={0}>
-        Fueled by high energy levels and boundless enthusiasm, I’m easily
-        inspired and more then willing to follow my fascinations wherever they
-        take me. I’m passionate, expressive, multi-talented spirit with a
-        natural ability to entertain and inspire. I’m never satisfied to just
-        come up with ideas. Instead I have an almost impulsive need to act on
-        them.
-      </Des>
-      <Des time={0}>
-        My abundant energy fuels me in the pursuit of many interests, hobbies,
-        areas of study and artistic endeavors. I’m a fast learner, able to pick
-        up new skills and juggle different projects and roles with relative
-        ease.
-      </Des>
+      <div className="text-left">
+        <Des time={1}>
+          Hi, I’m Dharmveer Singh. I'm a multi-talented human, wide range of
+          design disciplines.
+        </Des>
+        <Des time={0}>
+          I don’t like to define myself by the work I’ve done. I define myself
+          by the work I want to do. Skills can be taught, personality is
+          inherent. I prefer to keep learning, continue challenging myself, and
+          do interesting things that matter.
+        </Des>
+        <Des time={0}>
+          Fueled by high energy levels and boundless enthusiasm, I’m easily
+          inspired and more then willing to follow my fascinations wherever they
+          take me. I’m passionate, expressive, multi-talented spirit with a
+          natural ability to entertain and inspire. I’m never satisfied to just
+          come up with ideas. Instead I have an almost impulsive need to act on
+          them.
+        </Des>
+        <Des time={0}>
+          My abundant energy fuels me in the pursuit of many interests, hobbies,
+          areas of study and artistic endeavors. I’m a fast learner, able to
+          pick up new skills and juggle different projects and roles with
+          relative ease.
+        </Des>
+      </div>
       <LineBreak />
       <SubHeading>MY WEAPONS</SubHeading>
       <div className="flex flex-wrap md:overflow-y-auto items-center justify-center ">
@@ -55,7 +57,7 @@ const About = () => {
           <Rchart data={dataHtml} />
           <Wheading des="HTML" />
         </div>
-       
+
         <div className="shadow-lg m-1">
           <Rchart data={dataReact} />
           <Wheading des="JavaScript" />
@@ -75,7 +77,9 @@ interface Description {
 const Wheading = ({ des }: Description) => {
   return (
     <div>
-      <h1 className="text-2xl tracking-wide font-bold  text-white my-5">{des}</h1>
+      <h1 className="text-2xl tracking-wide font-bold  text-white my-5">
+        {des}
+      </h1>
     </div>
   );
 };

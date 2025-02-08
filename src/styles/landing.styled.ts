@@ -276,6 +276,7 @@ export const Des = styled.div<{ time: number }>`
   /* text-transform: uppercase; */
   line-height: 1.5rem;
   letter-spacing: 0.04em;
+  color: #e3e3e3;
   animation: ${fadeIn} 0.5s ease-in-out ${(props) => `${props.time}s`} forwards;
   @media screen and (max-width: 768px) {
     width: 90%;
