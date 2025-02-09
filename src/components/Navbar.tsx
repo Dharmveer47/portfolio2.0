@@ -6,8 +6,8 @@ export const Navbar: React.FC = () => {
   const Links = {
     INTRO: "INTRO",
     ABOUT: "ABOUT",
-    PROJECTS: "PROJECTS",
     CONTACT: "CONTACT",
+    PROJECTS: "PROJECTS",
     "LINKED IN": "LINKED IN",
     GITHUB: "GITHUB",
   };

@@ -22,7 +22,6 @@ import { Footer } from "../components/Footer";
 import ParticlesComponents from "../components/particles/Particles";
 import About from "./About";
 import Projects from "./Projects";
-import OldShowCase from "./OldShowCase";
 
 // import { HashLink } from 'react-router-hash-link';
 // interface Props {
@@ -60,6 +59,7 @@ export default function Landing() {
           <Projects />
         </ProjectContainer>
         {/* <OldShowCase /> */}
+      
       </LandingContainer>
     </>
   );

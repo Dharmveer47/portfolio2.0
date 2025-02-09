@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { HeadingMain } from "../styles/About.styled";
 import { Link, useLocation } from "react-router-dom";
 import { useIsMobile } from "../hooks/useIsMobile";
+import { Vitrualview } from "../components/virtual-view/Vitrualview";
+import { ProjectWrap } from "../styles/project.styled";
+import useIsVisible from "../hooks/useIsVisible";
 
 const HASH_LINK = {
   RTH: "#road-that-honk",
@@ -22,83 +25,96 @@ const DES = {
 
 const Projects: React.FC = () => {
   const { hash } = useLocation();
+  const isVisible = useIsVisible("projects-heading");
   const [name, setName] = useState("");
   const isMobile = useIsMobile();
-  console.log(isMobile, "check_isMobile");
-  return (
-    <div id="projects" className=" w-fulls flex flex-col">
-      <HeadingMain>Featured Projects</HeadingMain>
 
-      <div
-        className="border min-h-[80vh]  flex  
-      items-center justify-center"
-      >
+  return (
+    <ProjectWrap>
+      <div id="projects" className=" w-fulls flex flex-col">
         <div
-          className={`border  text-gray-100   
+          className={`
+      absolute top-0 left-0 right-0 bottom-0
+        `}
+        >
+          {isVisible && <Vitrualview />}
+        </div>
+        <HeadingMain id="projects-heading" className="relative">
+          Featured Projects
+        </HeadingMain>
+
+        <div
+          className="border min-h-[80vh]  flex  
+      items-center justify-center z-10"
+        >
+          <div
+            className={`border  text-gray-100   
         text-start ${
           isMobile ? "w-5/6" : "w-3/4"
         }  flex   items-center justify-between font-light ${
-            isMobile ? "flex-col-reverse" : "flex-row"
-          }`}
-        >
-          <div className={` ${isMobile ? "w-5/6" : "w-1/2"}`}>
-            <h2 className="text-2xl my-5 mb-8">{name}</h2>
-            <div className="flex">
-              <div className="w-3 bg-white mr-6  rounded-sm"></div>
+              isMobile ? "flex-col-reverse" : "flex-row"
+            }`}
+          >
+            <div className={` ${isMobile ? "w-5/6" : "w-1/2"}`}>
+              <h2 className="text-2xl my-5 mb-8">{name}</h2>
+              <div className="flex">
+                <div className="w-3 bg-white mr-6  rounded-sm"></div>
 
-              <div className="p-2 leading-6 tracking-wide transition-all">
-                {(hash === HASH_LINK.RTH || hash === "") && DES.RTH}
-                {hash === HASH_LINK.SPOTBUS_CANVAS && DES.SPOTBUS_CANVAS}
-                {hash === HASH_LINK.SPOTBUS_DASHBOARD && DES.SPOTBUS_DASHBOARD}
-                {hash === HASH_LINK.SPOTBUS_CHAT_BOT && DES.SPOTBUS_CHAT_BOT}
+                <div className="p-2 leading-6 tracking-wide transition-all">
+                  {(hash === HASH_LINK.RTH || hash === "") && DES.RTH}
+                  {hash === HASH_LINK.SPOTBUS_CANVAS && DES.SPOTBUS_CANVAS}
+                  {hash === HASH_LINK.SPOTBUS_DASHBOARD &&
+                    DES.SPOTBUS_DASHBOARD}
+                  {hash === HASH_LINK.SPOTBUS_CHAT_BOT && DES.SPOTBUS_CHAT_BOT}
+                </div>
+              </div>
+              <div className="mx-8 mt-5 font-bold  tracking-wide ">
+                {/* <div>View Site</div> */}
+                <div className="w-10 bg-white my-2  rounded-sm h-[2px]"></div>
               </div>
             </div>
-            <div className="mx-8 mt-5 font-bold  tracking-wide ">
-              {/* <div>View Site</div> */}
-              <div className="w-10 bg-white my-2  rounded-sm h-[2px]"></div>
-            </div>
-          </div>
 
-          <div className={`${isMobile ? "w-full" : "w-1/3"}   relative `}>
-            {!isMobile && (
-              <div className="absolute -top-12 -left-6">
-                <div className="w-20 bg-white my-2  rounded-sm h-[2px]"></div>
-                <div className="w-[3px] bg-white my-2  rounded-sm h-20"></div>
+            <div className={`${isMobile ? "w-full" : "w-1/3"}   relative `}>
+              {!isMobile && (
+                <div className="absolute -top-12 -left-6">
+                  <div className="w-20 bg-white my-2  rounded-sm h-[2px]"></div>
+                  <div className="w-[3px] bg-white my-2  rounded-sm h-20"></div>
+                </div>
+              )}
+              {!isMobile && <div className="text-2xl mb-8">Projects</div>}
+              <div className="w-full">
+                <ul
+                  className={` ${
+                    isMobile ? "flex  w-full gap-2" : "space-y-3"
+                  }   text-sm `}
+                >
+                  <LI
+                    setName={setName}
+                    name="Road That Honk"
+                    _to={HASH_LINK.RTH}
+                  />
+                  <LI
+                    setName={setName}
+                    name="Spotbus Canvas"
+                    _to={HASH_LINK.SPOTBUS_CANVAS}
+                  />
+                  <LI
+                    setName={setName}
+                    name="Spotbus Dashboard"
+                    _to={HASH_LINK.SPOTBUS_DASHBOARD}
+                  />
+                  <LI
+                    setName={setName}
+                    name="Spotbus Chat bot"
+                    _to={HASH_LINK.SPOTBUS_CHAT_BOT}
+                  />
+                </ul>
               </div>
-            )}
-            {!isMobile && <div className="text-2xl mb-8">Projects</div>}
-            <div className="w-full">
-              <ul
-                className={` ${
-                  isMobile ? "flex  w-full gap-2" : "space-y-3"
-                }   text-sm `}
-              >
-                <LI
-                  setName={setName}
-                  name="Road That Honk"
-                  _to={HASH_LINK.RTH}
-                />
-                <LI
-                  setName={setName}
-                  name="Spotbus Canvas"
-                  _to={HASH_LINK.SPOTBUS_CANVAS}
-                />
-                <LI
-                  setName={setName}
-                  name="Spotbus Dashboard"
-                  _to={HASH_LINK.SPOTBUS_DASHBOARD}
-                />
-                <LI
-                  setName={setName}
-                  name="Spotbus Chat bot"
-                  _to={HASH_LINK.SPOTBUS_CHAT_BOT}
-                />
-              </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </ProjectWrap>
   );
 };
 
