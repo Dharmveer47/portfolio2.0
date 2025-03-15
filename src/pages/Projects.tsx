@@ -31,9 +31,10 @@ const Projects: React.FC = () => {
 
   return (
     <ProjectWrap>
-      <div id="projects" className=" w-fulls flex flex-col">
+      <div id="projects" className="  w-fulls flex flex-col">
         <div
           className={`
+            project-container
       absolute top-0 left-0 right-0 bottom-0
         `}
         >
@@ -49,7 +50,7 @@ const Projects: React.FC = () => {
         >
           <div
             className={`border  text-gray-100   
-        text-start ${
+        text-start wrap-section ${
           isMobile ? "w-5/6" : "w-3/4"
         }  flex   items-center justify-between font-light ${
               isMobile ? "flex-col-reverse" : "flex-row"

@@ -1,6 +1,15 @@
 import styled from "styled-components";
 
 export const ProjectWrap = styled.div`
+  .project-container {
+    filter: contrast(2) brightness(47.5) hue-rotate(325deg) sepia(1)
+      saturate(0.1);
+  }
+  .wrap-section {
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    filter: contrast(1.5);
+  }
   &:before {
     content: "";
     position: absolute;
